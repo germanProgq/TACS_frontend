@@ -146,6 +146,7 @@ export const Features = memo(({ mousePosition }: FeaturesProps) => {
             onHoverStart={() => !isDevice && setActiveFeature(index)}
             onClick={() => handleFeatureInteraction(index)}
             onTap={() => handleFeatureInteraction(index)}
+            onTapStart={() => isDevice && setActiveFeature(index)}
             whileHover={!isDevice ? {
               scale: 1.05,
               rotateY: 5,

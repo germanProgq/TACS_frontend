@@ -251,6 +251,10 @@
     touch-action: pan-y;
   }
   
+  .enhanced-interaction-container .feature-card {
+    touch-action: manipulation;
+  }
+  
   .background-3d-effects {
     opacity: 0.3; /* Reduce for performance on mobile */
   }
