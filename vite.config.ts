@@ -5,7 +5,7 @@ import compression from 'vite-plugin-compression'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/tacs-frontend/',
+  base: '/TACS_frontend/',
   plugins: [
     react(),
     compression({
