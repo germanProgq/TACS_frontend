@@ -4,8 +4,8 @@ import { visualizer } from 'rollup-plugin-visualizer'
 import compression from 'vite-plugin-compression'
 
 // https://vite.dev/config/
-export default defineConfig({
-  base: '/tacs/',
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/tacs/' : '/',
   plugins: [
     react(),
     compression({
@@ -108,4 +108,4 @@ export default defineConfig({
     host: true,
     port: 5174
   }
-})
+}))
