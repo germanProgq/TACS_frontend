@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="900" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Neon glow -->
+    <filter id="neon" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Radial gradient for futuristic glow -->
+    <radialGradient id="rad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#15151f"/>
+      <stop offset="70%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#000"/>
+    </radialGradient>
+
+    <!-- Grid pattern -->
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0 L0 0 0 60" fill="none" stroke="#222" stroke-width="4"/>
+    </pattern>
+
+    <style>
+      .stroke-cyan   { stroke: #00ffff; stroke-width: 12; fill: none; filter: url(#neon); }
+      .stroke-purple { stroke: #aa00ff; stroke-width: 8; fill: none; filter: url(#neon); }
+      .fill-red      { fill: #ff0033; }
+      .fill-purple   { fill: #aa00ff; }
+      .fill-blue     { fill: #009dff; }
+      .dark          { fill: #0d1117; }
+    </style>
+  </defs>
+
+  <!-- Main circular frame -->
+  <circle cx="450" cy="450" r="440" fill="url(#rad)" stroke="#aa00ff" stroke-width="20" filter="url(#neon)"/>
+
+  <!-- Futuristic concentric rings -->
+  <circle cx="450" cy="450" r="380" class="stroke-purple"/>
+  <circle cx="450" cy="450" r="310" class="stroke-purple" stroke-width="6"/>
+  <circle cx="450" cy="450" r="240" class="stroke-purple" stroke-width="4"/>
+
+  <!-- Subtle grid background clipped to circle -->
+  <g clip-path="url(#clip)">
+    <rect x="0" y="0" width="900" height="900" fill="url(#grid)" opacity="0.3"/>
+  </g>
+  <clipPath id="clip"><circle cx="450" cy="450" r="440"/></clipPath>
+
+  <!-- Traffic light -->
+  <g transform="translate(325,180)" filter="url(#neon)">
+    <rect x="0" y="0" width="250" height="550" rx="35" class="dark" stroke="#00ffff" stroke-width="18"/>
+
+    <!-- Lights -->
+    <circle cx="125" cy="110" r="75" class="fill-red"   stroke="#222" stroke-width="12"/>
+    <circle cx="125" cy="275" r="75" class="fill-purple" stroke="#222" stroke-width="12"/>
+    <circle cx="125" cy="440" r="75" class="fill-blue"  stroke="#222" stroke-width="12"/>
+
+    <!-- Face -->
+    <line x1="35"  y1="180" x2="95"  y2="150" class="stroke-cyan" stroke-width="10"/>
+    <line x1="155" y1="150" x2="215" y2="180" class="stroke-cyan" stroke-width="10"/>
+    <path d="M55 515 Q125 575 195 515" class="stroke-cyan" stroke-width="12"/>
+  </g>
+</svg>

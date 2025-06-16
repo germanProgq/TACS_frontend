@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #0d1117; }
+      .border { fill: none; stroke: #aa00ff; stroke-width: 2; }
+      .red { fill: #ff0033; }
+      .purple { fill: #aa00ff; }
+      .blue { fill: #009dff; }
+    </style>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" class="bg border"/>
+  
+  <!-- Simplified traffic light -->
+  <rect x="10" y="6" width="12" height="20" rx="2" class="bg" stroke="#00ffff" stroke-width="1"/>
+  
+  <!-- Traffic lights -->
+  <circle cx="16" cy="10" r="2.5" class="red"/>
+  <circle cx="16" cy="16" r="2.5" class="purple"/>
+  <circle cx="16" cy="22" r="2.5" class="blue"/>
+</svg>

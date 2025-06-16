@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="900" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="neon" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .stroke-neon { stroke: #aa00ff; stroke-width: 10; fill: none; filter: url(#neon); }
+      .fill-red   { fill: #ff0033; }
+      .fill-blue  { fill: #009dff; }
+      .fill-purple{ fill: #aa00ff; }
+      .dark-bg    { fill: #0d1117; }
+    </style>
+  </defs>
+
+  <!-- Chair -->
+  <!-- Chair legs -->
+  <line x1="250" y1="650" x2="250" y2="800" class="stroke-neon"/>
+  <line x1="650" y1="650" x2="650" y2="800" class="stroke-neon"/>
+  <!-- Chair seat -->
+  <rect x="250" y="600" width="400" height="60" rx="15" class="dark-bg" stroke="#aa00ff" stroke-width="15" filter="url(#neon)"/>
+  <!-- Chair back -->
+  <rect x="250" y="300" width="400" height="300" rx="20" class="dark-bg" stroke="#aa00ff" stroke-width="15" filter="url(#neon)"/>
+
+  <!-- Traffic light body positioned on chair -->
+  <g transform="translate(350,340)" filter="url(#neon)">
+    <!-- Housing -->
+    <rect x="0" y="0" width="200" height="450" rx="30" ry="30" class="dark-bg" stroke="#aa00ff" stroke-width="15"/>
+    <!-- Lights -->
+    <circle cx="100" cy="90"  r="60" class="fill-red"   stroke="#222" stroke-width="8"/>
+    <circle cx="100" cy="225" r="60" class="fill-purple" stroke="#222" stroke-width="8"/>
+    <circle cx="100" cy="360" r="60" class="fill-blue"  stroke="#222" stroke-width="8"/>
+    <!-- Angry eyebrows -->
+    <line x1="20"  y1="140" x2="80"  y2="110" class="stroke-neon"/>
+    <line x1="120" y1="110" x2="180" y2="140" class="stroke-neon"/>
+    <!-- Frown -->
+    <path d="M40 420 Q100 480 160 420" class="stroke-neon"/>
+  </g>
+
+  <!-- Legs (bent sitting) -->
+  <line x1="400" y1="790" x2="400" y2="880" class="stroke-neon"/>
+  <line x1="500" y1="790" x2="500" y2="880" class="stroke-neon"/>
+</svg>
